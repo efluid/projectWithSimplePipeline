@@ -1,0 +1,17 @@
+def junitVersion = '4.11'
+def assertJVersion = '3.8.0'
+def jenkinsPipelineUnitVersion = '1.1'
+def groovyVersion = '2.5.6'
+
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+    testCompile "junit:junit:${junitVersion}"
+    testCompile "org.assertj:assertj-core:${assertJVersion}"
+    testCompile "com.lesfurets:jenkins-pipeline-unit:${jenkinsPipelineUnitVersion}"
+}
